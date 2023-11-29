@@ -170,3 +170,25 @@ Text Domain: wpbootstraptheme
     padding: 15px;
     border: #ccc 1px solid;
   }
+
+  /*
+ * (c) 2022 Manish Pushkar bs5-navwalker 
+ * SPDX-License-Identifier: MIT
+ */
+@media all and (min-width: 992px) {
+  ul.depth_1 {
+      left: 100% !important;
+      top: 0% !important
+  }
+  ul.depth_0>.menu-item-has-children a:after {
+      display: inline-flex;
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-left-color: #cccccc;
+  }
+  ul.depth_1 a:after {
+      border: 0 !important;
+  }
+}
