@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <link href="<?php bloginfo('template_url');?>/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
+    <link href="<?php bloginfo('stylesheet_url');?>/css/main.css" rel="stylesheet">
 
     <?php wp_head();?>
 
@@ -131,7 +131,7 @@
         <?php
         wp_nav_menu( array(
             'theme_location'    => 'primary',
-            'depth'             => 6,
+            'depth'             => 3,
             'container'         => 'div',
             'container_class'   => 'collapse navbar-collapse',
             'container_id'      => 'bs-example-navbar-collapse-1',

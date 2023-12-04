@@ -13,7 +13,7 @@ function load_css()
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), false, 'all');
     wp_enqueue_style('bootstrap');
 
-    wp_register_style('style', get_template_directory_uri() . '/css/style.css', array(), false, 'all');
+    wp_register_style('style', get_template_directory_uri() . '/css/main.css', array(), false, 'all');
     wp_enqueue_style('style');
 }
 add_action('wp_enqueue_scripts','load_css');
@@ -64,6 +64,17 @@ register_nav_menus(
     array(
       'primary' => 'Primary Menu',
     )
-  
   );
-?>
+
+  //Theme Support
+  function wpb_theme_support(){
+    add_theme_support('post-thumbnails');
+  }
+  add_action( 'after_setup_theme','wpb_theme_support');
+
+// Excerpt length control
+function set_excerpt_length(){
+  return 40;
+}
+
+add_filter('excerpt_length','set_excerpt_length');
