@@ -47,11 +47,7 @@
   </div>
 
   <div class="row g-5">
-    <div class="col-md-8">
-      <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From the Firehose
-      </h3>
-      
+    <div class="col-md-8">        
       <?php if(have_posts()) : ?>
           <?php while(have_posts()): the_post();?>
           
@@ -59,28 +55,12 @@
             <h2 class="display-5 link-body-emphasis mb-1">
                 <?php the_title();?>
               </a>
-            </h2>
-            <p class="blog-post-meta">
-              <?php the_time('F j, Y g:i a');?> 
-              by 
-            <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'));?>">
-            <?php the_author();?>
-            </a>
-            </p>
-            
-            <?php if(has_post_thumbnail()) : ?>
-              <div class="post-thumbnail">
-              <?php the_post_thumbnail();?>
-              </div>     
-            <?php endif; ?>
-
-            <?php the_content();?>    
-             <br>
-             <?php comments_template(); ?>
+            </h2>       
+            <?php the_content();?>      
           </article>
             <?php endwhile; ?>
                 <?php else : ?>
-                  <p><?php __('No posts found'); ?></p>
+                  <p><?php __('No Page found'); ?></p>
           <?php endif;?>
           
 

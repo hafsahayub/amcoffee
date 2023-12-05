@@ -78,3 +78,17 @@ function set_excerpt_length(){
 }
 
 add_filter('excerpt_length','set_excerpt_length');
+
+//Widget locations
+function wpb_init_widget($id){
+  register_sidebar(array(
+    'name' => 'Sidebar',
+    'id'=> 'sidebar',
+    'before_widget' =>'<div class="p-4">',
+    'after_widget'=>'</div>',
+    'before_title'=>'<h4>',
+    'after_title' =>'</h4>'
+  ));
+}
+
+add_action('widgets_init','wpb_init_widget');
