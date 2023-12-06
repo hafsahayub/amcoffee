@@ -59,16 +59,22 @@ function register_navwalker(){
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
-//register nav menu
-register_nav_menus(
-    array(
-      'primary' => 'Primary Menu',
-    )
-  );
-
   //Theme Support
   function wpb_theme_support(){
+
     add_theme_support('post-thumbnails');
+
+    //register nav menu
+    register_nav_menus(
+        array(
+          'primary' => 'Primary Menu',
+        )
+       );
+
+    //Post Formats
+    add_theme_support('post-formats', array('aside','gallery'));
+
+
   }
   add_action( 'after_setup_theme','wpb_theme_support');
 

@@ -241,3 +241,17 @@ margin-bottom: 10px;
   padding: 4px;
   border: rgb(32, 29, 29) solid 1px;
 }
+.p-4 li{
+  list-style-type: none;
+}
+
+.post-gallery{
+  background: rgb(37, 26, 26);
+  color: rgb(51, 22, 22);
+  padding: 10px;
+  text-align: center;
+}
+
+.post-gallery h2{
+  color: rgb(190, 61, 61)8, 54, 54);
+}

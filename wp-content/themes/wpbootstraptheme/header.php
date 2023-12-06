@@ -30,7 +30,8 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <link href="<?php bloginfo('template_url');?>/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('stylesheet_url');?>/css/main.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/css/main.css" rel="stylesheet">
+
 
     <?php wp_head();?>
 
@@ -109,7 +110,7 @@
         <a class="link-secondary" href="#">Subscribe</a>
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Large</a>
+       <a class="blog-header-logo text-body-emphasis text-decoration-none" href="http://localhost/amcoffee/"><?php bloginfo('name'); ?></h1></a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         <a class="link-secondary" href="#" aria-label="Search">
@@ -127,7 +128,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"></a>
         <?php
         wp_nav_menu( array(
             'theme_location'    => 'primary',
