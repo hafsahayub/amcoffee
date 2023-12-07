@@ -141,7 +141,6 @@ text-align: center;
 border-bottom: #ccc 1px solid;
 margin-bottom: 20px;
 color: #fff;
-background: url('../img/showcase.jpg') no-repeat center center;
 }
 
 .showcase h1{
@@ -245,13 +244,25 @@ margin-bottom: 10px;
   list-style-type: none;
 }
 
-.post-gallery{
-  background: rgb(37, 26, 26);
-  color: rgb(51, 22, 22);
-  padding: 10px;
+/* post format styles */
+article.post-gallery{
+  background-color: rgb(226, 154, 154);
+  color:white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+article.post-gallery img{
+  border: none;
+  width: 90%;
+  height: 110%;
+}
+
+article.post-gallery h2{
   text-align: center;
 }
 
-.post-gallery h2{
-  color: rgb(190, 61, 61)8, 54, 54);
+div.card{
+  background-color: rgb(183, 208, 209);
 }
+

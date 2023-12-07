@@ -1,15 +1,15 @@
-
-<div class="col-md-4"> 
-        <?php if(is_active_sidebar('sidebar')):?>
-              <?php dynamic_sidebar('sidebar');?>
-        <?php endif; ?>
-    </div>
-      </div>
-    </div>
+<?php if(!is_front_page()):?>
+  <div class="col-md-4"> 
+          <?php if(is_active_sidebar('sidebar')):?>
+                <?php dynamic_sidebar('sidebar');?>
+          <?php endif; ?>
+   </div>
   </div>
+</div>
+</div>
 
 </main>
-
+<?php endif; ?>
 <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
   <p>&copy; <?php echo Date('Y');?> - <?php bloginfo('name')?></p>
   <p class="mb-0">

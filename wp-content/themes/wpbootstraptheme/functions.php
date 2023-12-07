@@ -98,3 +98,6 @@ function wpb_init_widget($id){
 }
 
 add_action('widgets_init','wpb_init_widget');
+
+//Customizer File
+require get_template_directory(). '/inc/customizer.php';
