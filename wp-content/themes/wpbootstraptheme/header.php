@@ -33,7 +33,11 @@
     <header class="border-bottom lh-1 py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
-          <a class="link-secondary" href="#">Subscribe</a>
+          <div class="logo">
+          <?php if ( function_exists( 'the_custom_logo' ) ) {
+	          the_custom_logo();
+          }?>
+          </div>
         </div>
         <div class="col-4 text-center">
         <a class="blog-header-logo text-body-emphasis text-decoration-none" href="http://localhost/amcoffee/"><?php bloginfo('name'); ?></h1></a>

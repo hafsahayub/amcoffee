@@ -61,7 +61,7 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 
   //Theme Support
   function wpb_theme_support(){
-
+    //thumbnails
     add_theme_support('post-thumbnails');
 
     //register nav menu
@@ -73,7 +73,8 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 
     //Post Formats
     add_theme_support('post-formats', array('aside','gallery'));
-
+    //custom logo
+    add_theme_support( 'custom-logo' );
 
   }
   add_action( 'after_setup_theme','wpb_theme_support');
