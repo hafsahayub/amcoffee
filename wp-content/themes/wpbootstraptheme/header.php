@@ -34,9 +34,9 @@
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
           <div class="logo">
-          <?php if ( function_exists( 'the_custom_logo' ) ) {
-	          the_custom_logo();
-          }?>
+            <?php if ( function_exists( 'the_custom_logo' ) ) {
+              the_custom_logo();
+            }?>
           </div>
         </div>
         <div class="col-4 text-center">

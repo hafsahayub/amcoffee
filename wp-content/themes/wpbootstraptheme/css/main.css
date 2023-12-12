@@ -265,3 +265,23 @@ article.post-gallery h2{
 div.card{
   background-color: rgb(183, 208, 209);
 }
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.post-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-item h2 {
+  margin-bottom: 10px;
+}
+
+.post-content {
+  color: #555;
+}

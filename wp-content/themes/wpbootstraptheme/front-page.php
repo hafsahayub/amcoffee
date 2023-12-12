@@ -39,9 +39,9 @@
             <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
           <div class="logo">
-          <?php if ( function_exists( 'the_custom_logo' ) ) {
-	          the_custom_logo();
-          }?>
+            <?php if ( function_exists( 'the_custom_logo' ) ) {
+              the_custom_logo();
+            }?>
           </div>
         </div>
             <div class="col-4 text-center">
@@ -57,7 +57,7 @@
         </header>
 
         <div>
-        <nav class="navbar navbar-expand-md navbar-light bg-light mb-1" role="navigation">
+        <nav class="navbar navbar-expand-md lead" role="navigation">
             <div class="container mx-1 ">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
@@ -92,6 +92,167 @@
       </div>
     </section>
 <!-- Banner end -->
+
+<!-- Body start -->
+
+<!-- First section start -->
+<section class="custom-section ">
+    <div class="container">
+        <div class="row">
+            <div class="eltdf-st-title col-md-12 text-center mt-5 mb-4">
+                <h2>Our Delicious Offer</h2>
+            </div>
+
+            <div class="col-md-12 text-center ">
+              <span class="eltdf-separator-icon mt-5 mb-4">
+                <img width="189" height="24" src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png" class="attachment-full size-full" alt="s" decoding="async" loading="lazy" /> 
+              </span>
+            
+              <div class="wpb_wrapper mt-3 mb-4">
+              <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</h6>
+              </div>    
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 text-center mt-4 mb-4">
+                <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-5.png" alt="Image 1">
+                <div class="eltdf-iwt-content">
+                  <h5>
+                    <a itemprop="url" href="#" target="_self">
+                    <span class="eltdf-iwt-title-text">Types of Coffee</span>
+                    </a>
+                  </h5>
+                  <p class="eltdf-iwt-text mt-3 mb-4 wpb_text_column wpb_content_element ">Lorem ipsum dolor sit ametal, consectetuer adipiscing elitus. Aeneantos commodo </p>
+                </div>
+              </div>
+            <div class="col-md-6 text-center mt-4 mb-4">
+                <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png" alt="Image 2">
+                <div class="eltdf-iwt-content">
+                  <h5>
+                    <a itemprop="url" href="#" target="_self">
+                    <span class="eltdf-iwt-title-text">Bean Varieties</span>
+                    </a>
+                  </h5>
+                  <p class="eltdf-iwt-text mt-3 mb-4">Lorem ipsum dolor sit ametal, consectetuer adipiscing elitus. Aeneantos commodo </p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png" alt="Image 2">
+                <div class="eltdf-iwt-content">
+                  <h5>
+                    <a itemprop="url" href="#" target="_self">
+                    <span class="eltdf-iwt-title-text">Coffee To Go</span>
+                    </a>
+                  </h5>
+                  <p class="eltdf-iwt-text">Lorem ipsum dolor sit ametal, consectetuer adipiscing elitus. Aeneantos commodo </p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png" alt="Image 2">
+                <div class="eltdf-iwt-content">
+                  <h5>
+                    <a itemprop="url" href="#" target="_self">
+                    <span class="eltdf-iwt-title-text">Coffe And Pastry</span>
+                    </a>
+                  </h5>
+                  <p class="eltdf-iwt-text">Lorem ipsum dolor sit ametal, consectetuer adipiscing elitus. Aeneantos commodo </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- First section end -->
+
+<!-- Second section start -->
+<section class="custom-section" style="background-image: url(https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/new-new-h1-bacground-img-3.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="eltdf-st-title col-md-12 text-center mt-5 mb-4">
+                <h2>THE COFFEE HERALD</h2>
+            </div>
+
+            <div class="col-md-12 text-center ">
+              <span class="eltdf-separator-icon mt-5 mb-4">
+                <img width="189" height="24" src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png" class="attachment-full size-full" alt="s" decoding="async" loading="lazy" /> 
+              </span>
+            
+              <div class="wpb_wrapper mt-3 mb-5">
+              <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</h6>
+              </div>    
+            </div>
+        </div>
+
+        <div class="row eltdf-row-grid-section-wrapper">
+        <div class="col-md-8">
+        <?php
+          $args = array(
+              'posts_per_page' => -1, // Set this to the number of posts you want to display, or use -1 for all posts
+              'tax_query'      => array(
+                  array(
+                      'taxonomy' => 'post_format',
+                      'field'    => 'slug',
+                      'terms'    => array('post-format-aside', 'post-format-gallery'),
+                      'operator' => 'NOT IN',
+                  ),
+              ),
+          );
+
+          $custom_query = new WP_Query($args);
+
+          if ($custom_query->have_posts()) :
+              while ($custom_query->have_posts()) : $custom_query->the_post();
+                  get_template_part('content', get_post_format());
+              endwhile;
+              wp_reset_postdata(); // Reset the post data to the main query
+          else :
+              ?>
+              <p><?php _e('No posts found'); ?></p>
+          <?php endif; ?>
+
+          <?php
+          $args = array(
+              'post_type'      => 'post',  // Adjust if you want to display a different post type
+              'posts_per_page' => -1,      // Display all posts; adjust if you want a specific number
+          );
+
+          $custom_query = new WP_Query($args);
+
+          if ($custom_query->have_posts()) :
+              echo '<div class="post-grid">';
+              while ($custom_query->have_posts()) : $custom_query->the_post();
+          ?>
+                  <div class="post-item">
+                      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                      <div class="post-content">
+                          <?php the_excerpt(); ?>
+                      </div>
+                  </div>
+          <?php
+              endwhile;
+              echo '</div>';
+              wp_reset_postdata();  // Reset the post data to the main query
+          else :
+          ?>
+              <p><?php _e('No posts found'); ?></p>
+          <?php endif;
+          ?>
+
+
+      
+        <!-- Pagination -->
+        <nav class="blog-pagination" aria-label="Pagination">
+          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+        </nav>
+        </div>
+        </div>
+       </div>
+</section>
+<!-- Second section end -->
+
+
+<!-- Body end -->
 
 <!-- Footer start -->
 <footer class="py-5 text-center text-body-secondary bg-body-tertiary">

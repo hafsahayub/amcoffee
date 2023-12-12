@@ -17,5 +17,5 @@
               <?php the_post_thumbnail();?>
               </div>     
             <?php endif; ?>
-            <?php the_excerpt();?>    
+            <?php the_content();?>    
 </article>
