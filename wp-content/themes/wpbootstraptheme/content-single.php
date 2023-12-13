@@ -1,6 +1,6 @@
-<article class="blog-post">    
+<article class="blog-post mt-4">    
             <h2>
-              <a href="<?php the_permalink(); ?>">
+              <a href="<?php the_permalink(); ?>" style="color:black; text-decoration:none;">
                 <?php the_title();?>
               </a>
             </h2>

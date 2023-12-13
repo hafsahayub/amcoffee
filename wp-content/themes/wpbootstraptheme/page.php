@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-
+ <!-- Page content -->
   <div class="row g-5">
     <div class="col-md-8">        
       <?php if(have_posts()) : ?>
@@ -54,7 +54,6 @@
           <article class="blog-post">    
             <h2 class="display-5 link-body-emphasis mb-1">
                 <?php the_title();?>
-              </a>
             </h2>       
             <?php the_content();?>      
           </article>

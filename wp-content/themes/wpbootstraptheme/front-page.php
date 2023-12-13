@@ -96,7 +96,7 @@
 <!-- Body start -->
 
 <!-- First section start -->
-<section class="custom-section ">
+<section class="custom-section mb-5">
     <div class="container">
         <div class="row">
             <div class="eltdf-st-title col-md-12 text-center mt-5 mb-4">
@@ -119,7 +119,7 @@
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-5.png" alt="Image 1">
                 <div class="eltdf-iwt-content">
                   <h5>
-                    <a itemprop="url" href="#" target="_self">
+                    <a itemprop="url" href="#" target="_self" style="color:black; text-decoration:none;">
                     <span class="eltdf-iwt-title-text">Types of Coffee</span>
                     </a>
                   </h5>
@@ -130,7 +130,7 @@
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png" alt="Image 2">
                 <div class="eltdf-iwt-content">
                   <h5>
-                    <a itemprop="url" href="#" target="_self">
+                    <a itemprop="url" href="#" target="_self" style="color:black; text-decoration:none;">
                     <span class="eltdf-iwt-title-text">Bean Varieties</span>
                     </a>
                   </h5>
@@ -141,7 +141,7 @@
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png" alt="Image 2">
                 <div class="eltdf-iwt-content">
                   <h5>
-                    <a itemprop="url" href="#" target="_self">
+                    <a itemprop="url" href="#" target="_self" style="color:black; text-decoration:none;">
                     <span class="eltdf-iwt-title-text">Coffee To Go</span>
                     </a>
                   </h5>
@@ -152,7 +152,7 @@
                 <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png" alt="Image 2">
                 <div class="eltdf-iwt-content">
                   <h5>
-                    <a itemprop="url" href="#" target="_self">
+                    <a itemprop="url" href="#" target="_self" style="color:black; text-decoration:none;">
                     <span class="eltdf-iwt-title-text">Coffe And Pastry</span>
                     </a>
                   </h5>
@@ -184,37 +184,22 @@
         </div>
 
         <div class="row eltdf-row-grid-section-wrapper">
-        <div class="col-md-8">
-        <?php
-          $args = array(
-              'posts_per_page' => -1, // Set this to the number of posts you want to display, or use -1 for all posts
-              'tax_query'      => array(
-                  array(
-                      'taxonomy' => 'post_format',
-                      'field'    => 'slug',
-                      'terms'    => array('post-format-aside', 'post-format-gallery'),
-                      'operator' => 'NOT IN',
-                  ),
-              ),
-          );
-
-          $custom_query = new WP_Query($args);
-
-          if ($custom_query->have_posts()) :
-              while ($custom_query->have_posts()) : $custom_query->the_post();
-                  get_template_part('content', get_post_format());
-              endwhile;
-              wp_reset_postdata(); // Reset the post data to the main query
-          else :
-              ?>
-              <p><?php _e('No posts found'); ?></p>
-          <?php endif; ?>
-
+        <div class="col-md-12">
+          <!--display posts and excludes the post formats -->
           <?php
           $args = array(
               'post_type'      => 'post',  // Adjust if you want to display a different post type
-              'posts_per_page' => -1,      // Display all posts; adjust if you want a specific number
-          );
+              'posts_per_page' => 4,      // Display all posts; adjust if you want a specific number
+              'paged'          => get_query_var('paged') ? get_query_var('paged') : 1,
+              'tax_query'      => array(
+                array(
+                    'taxonomy' => 'post_format',
+                    'field'    => 'slug',
+                    'terms'    => array('post-format-aside', 'post-format-gallery'),
+                    'operator' => 'NOT IN',
+                ),
+              ),
+            );
 
           $custom_query = new WP_Query($args);
 
@@ -223,26 +208,35 @@
               while ($custom_query->have_posts()) : $custom_query->the_post();
           ?>
                   <div class="post-item">
-                      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <?php if(has_post_thumbnail()) : ?>
+                          <div class="post-thumbnail">
+                          <?php the_post_thumbnail('thumbnail', array('style' => 'width:100%; height:auto;'));?>
+                          </div>     
+                         <?php endif; ?>
+                      <h4><a href="<?php the_permalink(); ?>" style="color:black; text-decoration:none;"><?php the_title(); ?></a></h4>
                       <div class="post-content">
                           <?php the_excerpt(); ?>
                       </div>
+                      <p><a href="<?php the_permalink(); ?>" style="color:black;">Read More</a></p>
                   </div>
-          <?php
-              endwhile;
+          <?php endwhile;
               echo '</div>';
-              wp_reset_postdata();  // Reset the post data to the main query
+              // Pagination
+              echo '<div class="pagination-container">';
+              echo paginate_links();
+              echo '</div>';
+              // Reset the post data to the main query
+              wp_reset_postdata();  
+              
           else :
           ?>
               <p><?php _e('No posts found'); ?></p>
           <?php endif;
           ?>
 
-
-      
         <!-- Pagination -->
-        <nav class="blog-pagination" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <nav class="blog-pagination">
+          <a class="btn btn-outline-primary rounded-pill" href="">Older</a>
           <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
         </nav>
         </div>

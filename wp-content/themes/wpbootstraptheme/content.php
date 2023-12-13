@@ -1,6 +1,6 @@
 <article class="blog-post">    
             <h2>
-              <a href="<?php the_permalink(); ?>">
+              <a href="<?php the_permalink(); ?>" style="color:black; text-decoration:none;">
                 <?php the_title();?>
               </a>
             </h2>
@@ -17,5 +17,6 @@
               <?php the_post_thumbnail();?>
               </div>     
             <?php endif; ?>
-            <?php the_excerpt();?>    
+            <?php the_excerpt();?> 
+               
 </article>
