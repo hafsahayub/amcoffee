@@ -189,8 +189,8 @@
           <?php
           $args = array(
               'post_type'      => 'post',  // Adjust if you want to display a different post type
-              'posts_per_page' => 4,      // Display all posts; adjust if you want a specific number
-              'paged'          => get_query_var('paged') ? get_query_var('paged') : 1,
+              'posts_per_page' => 3,      // Display all posts; adjust if you want a specific number
+             
               'tax_query'      => array(
                 array(
                     'taxonomy' => 'post_format',
@@ -221,10 +221,7 @@
                   </div>
           <?php endwhile;
               echo '</div>';
-              // Pagination
-              echo '<div class="pagination-container">';
-              echo paginate_links();
-              echo '</div>';
+              
               // Reset the post data to the main query
               wp_reset_postdata();  
               
@@ -235,16 +232,23 @@
           ?>
 
         <!-- Pagination -->
-        <nav class="blog-pagination">
+        <!-- <nav class="blog-pagination">
           <a class="btn btn-outline-primary rounded-pill" href="">Older</a>
           <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
-        </nav>
+        </nav> -->
         </div>
         </div>
        </div>
 </section>
 <!-- Second section end -->
 
+<!-- Third section start -->
+<section class='section' style="background-image: url(https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-bacground-img-2.jpg)">
+<div class="container-inside">
+  dfgd
+</div>
+</section>
+<!-- Third section end -->
 
 <!-- Body end -->
 

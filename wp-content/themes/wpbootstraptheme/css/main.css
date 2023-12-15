@@ -284,3 +284,8 @@ div.card{
 .post-content {
   color: #555;
 }
+.container-inside{
+  height: 100%;
+  width: 100%;
+  padding: 100px;
+}
